@@ -129,6 +129,8 @@ class MyHome extends StatelessWidget {
               width: 200,
               //elevated buttons to add dimension to otherwise mostly flat layouts
               child: ElevatedButton(
+                //pushAndRemoveUntil: If you are using namedRoutes,
+                // This statement removes all the routes in the stack and makes the pushed one the root.
                 onPressed: () => Navigator.pushAndRemoveUntil(
                     context,
                     MaterialPageRoute(
