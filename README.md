@@ -1,6 +1,6 @@
 # the_flutter_way
 
-Grocery Food App
+Grocery Fruit App
 
 ## Getting Started
 
