@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'ProductList.dart';
+
 void main() {
   runApp(const StateManagementClass());
 }
@@ -9,6 +11,10 @@ class StateManagementClass extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp();
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'State Management',
+      home: ProductList(),
+    );
   }
 }
