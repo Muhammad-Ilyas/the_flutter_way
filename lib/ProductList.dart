@@ -12,24 +12,24 @@ class _MyWidgetState extends State<ProductList> {
   List<String> productName = [
     'Mango',
     'Orange',
-    'Banana',
+    'Grapes',
     'Mango',
     'Orange',
-    'Banana',
+    'Grapes',
     'Mango',
     'Orange',
-    'Banana',
+    'Grapes',
   ];
   List<String> productUnit = [
     'KG',
-    'KG',
     'DZN',
     'KG',
     'KG',
     'DZN',
     'KG',
     'KG',
-    'DZN'
+    'DZN',
+    'KG'
   ];
   List<int> productPrice = [200, 150, 100, 200, 150, 100];
   List<String> productImage = [
@@ -96,13 +96,35 @@ class _MyWidgetState extends State<ProductList> {
                                   image: NetworkImage(
                                     productImage[index].toString(),
                                   )),
-                              Text(
-                                productName[index].toString(),
-                                style: const TextStyle(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w500,
-                                ),
-                              )
+                              const SizedBox(
+                                width: 10,
+                              ),
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    productName[index].toString(),
+                                    style: const TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    height: 5,
+                                  ),
+                                  Text(
+                                    productUnit[index].toString() +
+                                        " " +
+                                        " " +
+                                        productPrice[index].toString(),
+                                    style: const TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ],
                           )
                         ],
