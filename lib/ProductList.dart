@@ -31,7 +31,7 @@ class _MyWidgetState extends State<ProductList> {
     'DZN',
     'KG'
   ];
-  List<int> productPrice = [200, 150, 100, 200, 150, 100];
+  List<int> productPrice = [200, 150, 100, 200, 150, 100, 200, 150, 100];
   List<String> productImage = [
     'https://image.shutterstock.com/image-photo/mango-isolated-on-white-background-600w-610892249.jpg',
     'https://image.shutterstock.com/image-photo/orange-sliced-green-leaves-isolated-600w-1386912362.jpg',
@@ -99,31 +99,50 @@ class _MyWidgetState extends State<ProductList> {
                               const SizedBox(
                                 width: 10,
                               ),
-                              Column(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    productName[index].toString(),
-                                    style: const TextStyle(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w500,
+                              Expanded(
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      productName[index].toString(),
+                                      style: const TextStyle(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w500,
+                                      ),
                                     ),
-                                  ),
-                                  const SizedBox(
-                                    height: 5,
-                                  ),
-                                  Text(
-                                    productUnit[index].toString() +
-                                        " " +
-                                        " " +
-                                        productPrice[index].toString(),
-                                    style: const TextStyle(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w500,
+                                    const SizedBox(
+                                      height: 15,
                                     ),
-                                  ),
-                                ],
+                                    Text(
+                                      productUnit[index].toString() +
+                                          "  " +
+                                          r"$" +
+                                          productPrice[index].toString(),
+                                      style: const TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                    Container(
+                                      height: 35,
+                                      width: 100,
+                                      decoration: BoxDecoration(
+                                          color: Colors.green,
+                                          borderRadius:
+                                              BorderRadius.circular(5)),
+                                      child: const Center(
+                                        child: Text(
+                                          'Add to Cart',
+                                          style: TextStyle(color: Colors.white),
+                                        ),
+                                      ),
+                                    )
+                                  ],
+                                ),
                               ),
                             ],
                           )
